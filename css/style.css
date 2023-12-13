@@ -1,0 +1,296 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Designing overall page*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+/*Setting Up CSS Box Model*/
+*{
+	box-sizing: border-box;
+	margin:0;
+}
+
+/*Setting Up Body*/
+body{
+  margin:0;
+  line-height: 1.5;
+  background-color: rgb(193, 210, 210);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+ }
+
+/*Designing Container Classes*/
+  .container{
+    max-width: 1170px;
+    margin:auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+/* Designing Header */
+    .header {
+        background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+    }
+.nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+nav.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 999;    
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}  
+  header {
+    text-align: center;
+    padding: 70px 0;
+  }
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Style for the links when hovered */
+.nav a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+/* Designing Home section */
+.home-section{
+    min-height: 100vh;
+    background-image: url('../img/aqua.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    padding:0 15px;
+	text-align: center;
+	
+}
+
+/* Designing About section */
+.about-section{
+	padding:80px 0 0;
+}
+
+/* Designing Prey & Predators Section */
+
+.predators-section{
+	padding:80px 0 0;
+}
+
+/* Designing Food Section */
+
+.gallery-section{
+		display: grid;
+		margin-left: 60px;
+		justify-content: center; /* Center the items horizontally */
+		align-items: center; /* Center the items vertically */
+	
+}
+
+/* Designing World Count Section */
+
+.count-section{
+	padding:80px 0 0;
+}
+
+.honesty {
+    margin-top: 80px;
+    text-align: justify;
+}
+
+.honesty ul {
+    list-style: none;
+}
+
+.honesty ol {
+    list-style: none;
+}
+
+.honesty a {
+    color:teal;
+}
+img{
+    height: 350px;
+    width: 350px;
+    padding: 6px;
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.1); /* Adjust the scale factor for your preference */
+}
+.copyright {
+	text-align: center;
+}
+.bodyh{
+	background-image: url('../img/6.jpeg');
+}
+iframe{
+	display: flex;
+	margin-left: 200px;
+	height: 500px;
+	width: 1000px;
+	margin-bottom: 10px;
+}
+/* Add your styles here */
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+/* Add your styles here */
+
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}

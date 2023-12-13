@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="css/contactstyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.contact-form').addEventListener('submit', function (event) {
+                if (!validateFirstName() || !validateLastName() || !validateEmail() || !validateDate() || !validatePhone() || !validateMessage()) {
+                    event.preventDefault();
+                }
+            });
+
+            function validateFirstName() {
+                var firstName = document.getElementById('fname').value;
+                if (firstName.length < 5) {
+                    alert('First name should be at least 5 characters.');
+                    return false;
+                }
+                return true;
+            }
+
+            function validateLastName() {
+                var lastName = document.getElementById('lname').value;
+                if (lastName.length < 5) {
+                    alert('Last name should be at least 5 characters.');
+                    return false;
+                }
+                return true;
+            }
+
+            function validateEmail() {
+                var email = document.getElementById('email').value;
+                if (!/\S+@\S+\.\S+/.test(email)) {
+                    alert('Email should contain a valid email address.');
+                    return false;
+                }
+                return true;
+            }
+
+            function validateDate() {
+                var date = document.getElementById('date').value;
+                if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+                    alert('Date must have the appropriate format (yyyy-mm-dd).');
+                    return false;
+                }
+                return true;
+            }
+
+            function validatePhone() {
+                var phone = document.getElementById('phone').value;
+                if (!/^\d{10}$/.test(phone)) {
+                    alert('Phone must contain 10 digits.');
+                    return false;
+                }
+                return true;
+            }
+
+            function validateMessage() {
+                var message = document.getElementById('message').value;
+                if (message.length < 50) {
+                    alert('Message must be at least 50 characters.');
+                    return false;
+                }
+                return true;
+            }
+        });
+    </script>
+</head>
+<body class="king">
+
+    <div class="overlay">
+        <div class="container">
+            <h2>Contact Us</h2>
+
+            <form action="https://formspree.io/f/xvojeovl" method="post" class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                <div class="form-group">
+                    <label for="fname" class="form-label">First Name:</label>
+                    <input type="text" id="fname" name="fname" class="fname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lname" class="form-label">Last Name:</label>
+                    <input type="text" id="lname" name="lname" class="lname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email"  name="email" class="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date" class="form-label">Date:</label>
+                    <input type="date" id="date"  name="date" class="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea  name="message" id="message " class="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "pratham.ahir.01@gmail.com",
+    Password : "9981C1D931DDBDA3F41E32C2E2425F4783EF",  
+    To : 'pratham.ahir.01@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "Contact Form Details",
+    Body: "Firstname: " + document. getElementById( "fname" ).value
+    + "<br> Lastname: " + document.getElementById("lname").value
+    + "<br> Email: " + document.getElementById("email").value
+    + "<br> Date: " + document.getElementById("date").value
+    + "<br> Pnone no: " + document.getElementById("phone").value
+    + "<br> Message: " + document.getElementById("message").value
+
+}).then(
+  message => alert(message)
+);
+    }
+   </script>
+</body>
+</html>

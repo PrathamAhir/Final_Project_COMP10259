@@ -1,0 +1,48 @@
+// Import the original style.css
+@import 'style.css';
+
+// Change menu text color to yellow
+.nav ul li a {
+    color: yellow;
+}
+.header {
+    background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+}
+// Change menu text hover color to white
+.header .nav ul li a:hover,
+.header.fixed .nav ul li a:hover {
+    color: white;
+}
+
+// Change all button background color to red
+.submit-button {
+    background-color: red;
+}
+
+// Apply dashed border to the Contact Us Form
+.contact-form {
+    border: 1px dashed #555;
+    padding: 20px;
+}
+
+// Add "after" effect to all button names and make them capital
+.button:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #333; // You can adjust the color
+    margin-top: 5px;
+}
+
+// Capitalize button names
+.button {
+    text-transform: uppercase;
+}
